@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uptime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.uptimesoftware.com/erdc/erdc erdc"
+        xmlns="http://www.uptimesoftware.com/erdc/erdc"
+        xmlns:upt="http://www.uptimesoftware.com/erdc/erdc" version="4.0" target_grouping="other">
+    <class>SSH Command</class>
+    <exec>JAVA_PLUGIN:UptimeMonitorSSHCommand</exec>
+	<erdc_version>1.0</erdc_version>
+    <category>Operating System Monitors</category>
+    <category_related>Network Device Monitors</category_related>
+    <grid_info>
+        <supported_versions>7.3</supported_versions>
+        <supported_platforms>windows, linux</supported_platforms>
+        <upgrade_in_place>true</upgrade_in_place>
+        <requires_agent_scripts>false</requires_agent_scripts>
+    </grid_info>
+    <elements>
+		<element name="username" parameter_type="input" data_type="string" gui_basic="1"
+                 range_type="0" units="">
+            <control_options>size:40</control_options>
+            <default_value></default_value>
+            <short_description>Username</short_description>
+            <long_description>Username for SSH login</long_description>
+            <validation_rule>
+                <alphanumeric/>
+            </validation_rule>
+            <error_message>
+                <alphanumeric>required field</alphanumeric>
+            </error_message>
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+		<element name="password" parameter_type="input" data_type="string" gui_basic="1"
+                 range_type="0" units="">
+            <control_options>size:40</control_options>
+            <default_value></default_value>
+            <short_description>Password</short_description>
+            <long_description>Password for SSH login</long_description>
+            <validation_rule>
+                <alphanumeric/>
+            </validation_rule>
+            <error_message>
+                <alphanumeric>required field</alphanumeric>
+            </error_message>
+            <gui_type>
+                <password/>
+            </gui_type>
+        </element>
+        <element name="port" parameter_type="input" data_type="integer" gui_basic="1"
+                 range_type="0" units="">
+            <control_options>size:10</control_options>
+            <default_value>22</default_value>
+            <short_description>Port</short_description>
+            <long_description>Port for SSH connection</long_description>
+            <validation_rule>
+                <alphanumeric/>
+            </validation_rule>
+            <error_message>
+                <alphanumeric>required field</alphanumeric>
+            </error_message>
+            <gui_type>
+                <integer/>
+            </gui_type>
+        </element>
+		<element name="sshCommand" parameter_type="input" data_type="string" gui_basic="1"
+                 range_type="0" units="">
+            <control_options>size:40</control_options>
+            <default_value></default_value>
+            <short_description>SSH Command</short_description>
+            <long_description>The SSH command that will be executed on the remote system</long_description>
+            <validation_rule>
+                <alphanumeric/>
+            </validation_rule>
+            <error_message>
+                <alphanumeric>required field</alphanumeric>
+            </error_message>
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+		<element name="outputType" parameter_type="input" data_type="string" gui_basic="1"
+                 range_type="0" units="">
+            <control_options>size:40</control_options>
+            <default_value></default_value>
+            <short_description>Result Datatype</short_description>
+            <long_description>The result's datatype from the SSH command</long_description>
+            <validation_rule>
+                <alphanumeric/>
+            </validation_rule>
+            <error_message>
+                <alphanumeric>required field</alphanumeric>
+            </error_message>
+            <gui_type>
+                <single_select type="dropdown">
+                    <value>String</value>
+                    <value>Numeric</value>
+                </single_select>
+            </gui_type>
+        </element>
+		
+		
+        <element name="stringOutput" parameter_type="output" data_type="string" gui_basic="1"
+                 range_type="0" units="">
+            <control_options>size:8</control_options>
+            <default_value/>
+            <short_description>Returned Data (String)</short_description>
+            <long_description>Returned Data (String)</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+		<element name="numericOutput" parameter_type="output" data_type="decimal" gui_basic="1"
+                 range_type="0" units="">
+            <control_options>size:8</control_options>
+            <default_value/>
+            <short_description>Returned Data (Numeric)</short_description>
+            <long_description>Returned Data (Numeric)</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <decimal/>
+            </gui_type>
+        </element>
+		
+    </elements>
+    <help>Remotely execute a command through SSH to monitor the output.</help>
+</uptime>

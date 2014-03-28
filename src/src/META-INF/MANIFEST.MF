@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Built-By: plui
+Build-Jdk: 1.7.0_09
+Plugin-Class: com.uptimesoftware.uptime.plugin.MonitorSSHCommand
+Plugin-Version: 1.0
+Plugin-Id: monitor-ssh-command
+Plugin-Provider: Uptime Software
+
