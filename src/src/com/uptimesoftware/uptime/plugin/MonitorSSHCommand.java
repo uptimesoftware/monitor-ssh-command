@@ -114,6 +114,8 @@ public class MonitorSSHCommand extends Plugin {
 					addVariable("numericOutput", Double.parseDouble(output));
 				}
 				
+				addVariable("exitCode", channel.getExitStatus());
+				
 				message += "Monitor ran successfully - returned: " + output.trim();
 				
 
@@ -125,7 +127,11 @@ public class MonitorSSHCommand extends Plugin {
 				message = "IO Exception in monitor. " + ioe.getMessage();
 				setState(MonitorState.CRIT);
 			} catch (Exception e) {
-				message = "General Exception in monitor. " + e.getMessage();
+				if (e.getMessage().equals("Auth fail")) {
+					message = "Incorrect username and/or password.  Please try again.";
+				} else {
+					message = "General Exception in monitor. " + e.getMessage();
+				}
 				setState(MonitorState.CRIT);
 			} 
 			setMessage(message);

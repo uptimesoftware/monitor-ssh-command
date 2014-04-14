@@ -124,7 +124,29 @@
                 <decimal/>
             </gui_type>
         </element>
-		
+		<element name="exitCode" parameter_type="output" data_type="integer" gui_basic="1"
+                 range_type="0" units="">
+            <control_options>size:8</control_options>
+            <default_value/>
+            <short_description>Exit Code</short_description>
+            <long_description>Exit Code</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <integer/>
+            </gui_type>
+        </element>
+		<element name="timer" parameter_type="output" data_type="integer" gui_basic="0" range_type="0" units="ms">
+			<control_options>size:8</control_options>
+			<default_value/>
+			<short_description>Response time</short_description>
+			<long_description>Response time in ms</long_description>
+			<validation_rule/>
+			<error_message/>
+			<gui_type>
+				<integer/>
+			</gui_type>
+		</element>
     </elements>
     <help>Remotely execute a command through SSH to monitor the output.</help>
 </uptime>

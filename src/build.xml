@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<project name="MonitorSSHCommand" default="dist" basedir=".">
+<project name="monitor-ssh-command" default="dist" basedir=".">
     
   <path id="compile.classpath">
     <fileset dir="lib">
@@ -26,14 +26,14 @@
   </target>
 
   <target name="dist" depends="compile"> 
-  	<zip destfile="dist/tmp/MonitorSSHCommand.zip">
+  	<zip destfile="dist/tmp/monitor-ssh-command.zip">
   	  <zipfileset dir="classes" prefix="classes"/>
       <zipfileset dir="lib" prefix="lib" excludes="compile/**"/>
       <zipfileset dir="src/META-INF" prefix="classes/META-INF"/>  
   	</zip>
-  	<zip destfile="../dist/MonitorSSHCommand.zip">
+  	<zip destfile="../dist/monitor-ssh-command.zip">
       <zipfileset dir="definition" />
-  	  <zipfileset file="dist/tmp/MonitorSSHCommand.zip" prefix="files/plugins/java" />
+  	  <zipfileset file="dist/tmp/monitor-ssh-command.zip" prefix="files/plugins/java" />
     </zip>
 	<copy todir="../pkg">
 		<fileset dir="definition"/>
