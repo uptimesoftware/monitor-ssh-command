@@ -7,13 +7,13 @@ tags:
 - ssh
 - java
 version_compatibility:
-- SSH Command Monitor 1.0: [7.3,7.4,7.5,7.6]
+- SSH Command Monitor 1.0: [7.3,7.4,7.5,7.6,7.7]
 
 download_files: 
 description: >
  This plugin remotely executes a command through SSH and monitors the string/numeric output, exit code and response time.
  
-supported_monitoring_stations: [7.3,7.4,7.5,7.6]
+supported_monitoring_stations: [7.3,7.4,7.5,7.6,7.7]
 
 supported_agents: 
 
