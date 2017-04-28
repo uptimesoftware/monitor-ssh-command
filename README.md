@@ -7,7 +7,7 @@ tags:
 - ssh
 - java
 version_compatibility:
-- SSH Command Monitor 1.0: [7.3,7.4,7.5,7.6,7.7]
+- SSH Command Monitor 1.0: [7.3,7.4,7.5,7.6,7.7,7.8]
 
 download_files: 
 description: >
@@ -15,11 +15,7 @@ description: >
  
 supported_monitoring_stations: [7.3,7.4,7.5,7.6,7.7]
 
-supported_agents: 
-
-installation_notes: n/a
-
-dependencies: None
+installation_notes: Require a restart of the Uptime Core (linux) / Uptime Data Collector (Windows) service after installation.
 
 input_variables:
 
@@ -37,4 +33,3 @@ output_variables:
 - Response time
 
 languages_used: [Java]
-
